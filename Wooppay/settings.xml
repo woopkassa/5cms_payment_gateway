@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>
+		Wooppay
+	</name>
+	<settings>
+		<variable>url</variable>
+		<name>Ссылка на API</name>
+	</settings>
+	<settings>
+		<variable>username</variable>
+		<name>Имя пользователя</name>
+	</settings>
+	<settings>
+		<variable>password</variable>
+		<name>Пароль пользователя</name>
+	</settings>
+	<settings>
+		<variable>prefix</variable>
+		<name>Префикс заказа</name>
+	</settings>
+	<settings>
+		<variable>service</variable>
+		<name>Имя сервиса</name>
+	</settings>
+</module>
