@@ -50,7 +50,7 @@ if (isset($_GET['order_id']) && isset($_GET['order_key'])) {
 				$invoice_request->serviceName = $service;
 				$invoice = $client->createInvoiceByRequest($invoice_request);
 				$operation = $client->getOperationData((int)$invoice->response->operationId);
-				if ($operation->response->records[0]->status == WooppayOperationStatus::OPERATION_STATUS_DONE) {
+				if ($operation->response->records[0]->status == WooppayOperationStatus::OPERATION_STATUS_DONE || $operation->response->records[0]->status == WooppayOperationStatus::OPERATION_STATUS_WAITING) {
 					$purchases = $fivecms->orders->get_purchases(array('order_id' => intval($order->id)));
 					foreach ($purchases as $purchase) {
 						$variant = $fivecms->variants->get_variant(intval($purchase->variant_id));
